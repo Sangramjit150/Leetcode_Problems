@@ -35,11 +35,11 @@ class Solution {
             slow=slow.next;
             fast=fast.next.next;
         }
-        TreeNode root=new TreeNode(slow.next.val);
-        ListNode rightHalf=slow.next.next;
+        TreeNode res=new TreeNode(slow.next.val);
+        ListNode righthalf=slow.next.next;
         slow.next=null;
-        root.left=sortedListToBST(head);
-        root.right=sortedListToBST(rightHalf);
-        return root;
+        res.left=sortedListToBST(head);
+        res.right=sortedListToBST(righthalf);
+        return res;
     }
 }
